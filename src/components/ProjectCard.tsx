@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { ExternalLink, Github } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 import { ImageWithFallback } from "./figma/imageWithFallback";
 

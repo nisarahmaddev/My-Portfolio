@@ -1,11 +1,8 @@
 import { useState, useEffect, FormEvent, ChangeEvent } from "react";
 import {
-  ChevronDown,
   Github,
   Linkedin,
   Mail,
-  Send,
-  Download,
 } from "lucide-react";
 import { ProjectCard } from "./components/ProjectCard";
 import { SkillChip } from "./components/SkillChip";
