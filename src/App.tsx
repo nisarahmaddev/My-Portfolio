@@ -1,9 +1,5 @@
 import { useState, useEffect, FormEvent, ChangeEvent } from "react";
-import {
-  Github,
-  Linkedin,
-  Mail,
-} from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { ProjectCard } from "./components/ProjectCard";
 import { SkillChip } from "./components/SkillChip";
 import { TimelineItem } from "./components/TimelineItem";
@@ -16,11 +12,10 @@ import { ThemeProvider, useTheme } from "./components/ThemeProvider";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { ImageWithFallback } from "./components/figma/imageWithFallback";
 import ERROR_IMG_SRC from "./assets/main.png";
-import TodoImg from "./assets/Todo.png";
-import CrudImg from "./assets/crud.png";
-import MagicImg from "./assets/Magic.png";
+import CrudImg from "./assets/latestcrud.png";
+import MagicImg from "./assets/card.jpg";
 import GithubImg from "./assets/GithubFinder.png";
-import PortfolioImg from "./assets/about1.png";
+import PortfolioImg from "./assets/port.jpg";
 import EcommerceImg from "./assets/shopify.avif";
 
 interface Project {
@@ -70,67 +65,63 @@ function AppContent() {
 
   const projects: Project[] = [
     {
+      title: "Portfolio Website",
+      description:
+        "Modern, responsive portfolio website showcasing creative work with smooth animations and interactive elements.",
+      image: PortfolioImg,
+      tags: ["ReactJs", "TypeScript", "Tailwind CSS", "Vercel"],
+      liveUrl: "https://my-portfolio-1mb1.vercel.app/",
+      codeUrl: "https://github.com/nisarahmaddev/My-Portfolio",
+    },
+    {
+      title: "Magic Memory",
+      description:
+        "A fun and interactive card matching memory game built with React.js and Tailwind CSS. Players flip cards to find matching pairs.",
+      image: MagicImg,
+      tags: ["ReactJs", "JavaScript", "Tailwind CSS", "Vercel"],
+      liveUrl: "https://magic-memory-app.vercel.app/",
+      codeUrl: "https://github.com/nisarahmaddev/Magic-Memory",
+    },
+    {
       title: "Todo List App",
       description:
-        "A sleek and intuitive todo list application with drag-and-drop functionality, real-time syncing, and customizable themes.",
-      image: TodoImg,
-      tags: ["React", "TypeScript", "Recharts", "Tailwind CSS"],
+        "A simple and responsive todo list application built with React. Users can add and delete tasks, with a clean and intuitive interface.",
+      image:
+        "https://images.unsplash.com/photo-1651055693398-0d66969cf759?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXNrJTIwbWFuYWdlbWVudCUyMGFwcHxlbnwxfHx8fDE3NTg0NjMwMTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      tags: ["ReactJs", "TypeScript", "Tailwind CSS", "Vercel"],
       liveUrl: "https://todo-list-app-sepia-three.vercel.app/",
       codeUrl: "https://github.com/nisarahmaddev/Todo-List",
     },
     {
       title: "CRUD Application",
       description:
-        "Cross-platform mobile banking application with biometric authentication and real-time transaction monitoring.",
+        "A React.js CRUD application for managing records with a responsive Tailwind CSS interface.",
       image: CrudImg,
-      tags: ["React Native", "TypeScript", "Firebase", "Expo"],
+      tags: ["ReactJs", "JavaScript", "Tailwind CSS", "Vercel"],
       liveUrl: "https://crud-app-three-orpin.vercel.app/",
       codeUrl: "https://github.com/nisarahmaddev/CRUD-App",
     },
-    {
-      title: "Magic Memory",
-      description:
-        "Full-stack e-commerce solution with inventory management, payment processing, and admin dashboard.",
-      image: MagicImg,
-      tags: ["Next.js", "TypeScript", "Stripe", "Supabase"],
-      liveUrl: "https://magic-memory-app.vercel.app/",
-      codeUrl: "https://github.com/nisarahmaddev/Magic-Memory",
-    },
+
     {
       title: "Github User Finder",
       description:
-        "Collaborative project management application with real-time updates, team collaboration, and productivity analytics.",
+        "A web app that searches GitHub users and displays their profile information using the GitHub API.",
       image: GithubImg,
-      tags: ["React", "TypeScript", "Socket.io", "Node.js"],
+      tags: ["JavaScript", "Bootstrap", "GitHub API", "Vercel"],
       liveUrl: "https://github-user-finder-vercel.vercel.app",
       codeUrl: "https://github.com/nisarahmaddev/Github-User-Finder",
     },
-    {
-      title: "Portfolio Website",
-      description:
-        "Modern, responsive portfolio website showcasing creative work with smooth animations and interactive elements.",
-      image: PortfolioImg,
-      tags: ["React", "Framer Motion", "Tailwind CSS", "Vercel"],
-      liveUrl: "https://my-portfolio-1mb1.vercel.app/",
-      codeUrl: "https://github.com/nisarahmaddev/My-Portfolio",
-    },
+
     {
       title: "Ecommerce Store",
       description:
-        "Full-stack e-commerce solution with inventory management, payment processing, and admin dashboard.",
+        "A responsive ecommerce website UI built with HTML5 and Tailwind CSS showcasing product listings and modern layout design.",
       image: EcommerceImg,
-      tags: ["Vue.js", "TypeScript", "OpenWeather API", "Mapbox"],
+      tags: ["JavaScript", "HTML5", "Tailwind CSS", "Vercel"],
       liveUrl: "https://ecommerce-store-vercel-six.vercel.app/",
       codeUrl: "https://github.com/nisarahmaddev/Ecommerce-Store",
     },
   ];
-  // "https://images.unsplash.com/photo-1641567535859-c58187ac4954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHAlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU4NTU5NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  // "https://images.unsplash.com/photo-1651055693398-0d66969cf759?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXNrJTIwbWFuYWdlbWVudCUyMGFwcHxlbnwxfHx8fDE3NTg0NjMwMTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  // "https://images.unsplash.com/photo-1649000808933-1f4aac7cad9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc1ODU1NTQyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  // "https://images.unsplash.com/photo-1694599048261-a1de00f0117e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc1ODQ2OTIyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  // "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU4NTQ3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-  // "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU4NTQ3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
-
 
   const skills: string[] = [
     "React.Js",
@@ -228,11 +219,15 @@ function AppContent() {
               </h1>
               {/* Glow effect behind text - only in dark mode */}
               {theme === "dark" && (
-                <div className="absolute inset-0 flex items-center 
-                                justify-center pointer-events-none">
-                  <div className="text-6xl md:text-8xl font-bold opacity-10 
+                <div
+                  className="absolute inset-0 flex items-center 
+                                justify-center pointer-events-none"
+                >
+                  <div
+                    className="text-6xl md:text-8xl font-bold opacity-10 
                                   blur-2xl bg-gradient-to-r from-cyan-400 
-                                  via-purple-400 to-blue-400 bg-clip-text text-transparent">
+                                  via-purple-400 to-blue-400 bg-clip-text text-transparent"
+                  >
                     Hi, I'm Nisar Ahmad
                   </div>
                 </div>
@@ -248,13 +243,15 @@ function AppContent() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-            <button className="inline-flex items-center justify-center gap-2 rounded-xl 
+            <button
+              className="inline-flex items-center justify-center gap-2 rounded-xl 
                               transition-all duration-300 cursor-pointer disabled:opacity-50 
                               disabled:cursor-not-allowed relative overflow-hidden px-8 py-4 
                               text-lg bg-gradient-to-r from-blue-400 to-purple-500 text-white 
                               font-bold shadow-2xl shadow-blue-500/50 hover:shadow-blue-500/75 
                               transform hover:scale-110 border-2 border-blue-300"
-              onClick={() => scrollToSection("contact")}>
+              onClick={() => scrollToSection("contact")}
+            >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-500 opacity-50 blur-lg"></div>
               <span className="relative z-10">
                 Hire Me
@@ -275,13 +272,15 @@ function AppContent() {
                 </svg>
               </span>
             </button>
-            <button className="inline-flex items-center justify-center gap-2 rounded-xl 
+            <button
+              className="inline-flex items-center justify-center gap-2 rounded-xl 
                               transition-all duration-300 cursor-pointer disabled:opacity-50 
                               disabled:cursor-not-allowed font-semibold relative overflow-hidden 
                               px-8 py-4 text-lg border-2 border-blue-500 text-blue-600 bg-transparent 
                               hover:bg-blue-50 hover:text-blue-700 hover:border-blue-600 hover:shadow-lg 
                               hover:shadow-blue-500/25"
-                              onClick={() => scrollToSection("projects")}>
+              onClick={() => scrollToSection("projects")}
+            >
               <span className="relative z-10">
                 View Work
                 <svg
@@ -339,8 +338,10 @@ function AppContent() {
                   </div>
                   {/* Glow effect - only in dark mode */}
                   {theme === "dark" && (
-                    <div className="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl 
-                                    blur-lg opacity-30 -z-10 animate-pulse"></div>
+                    <div
+                      className="absolute -inset-2 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl 
+                                    blur-lg opacity-30 -z-10 animate-pulse"
+                    ></div>
                   )}
                 </div>
               </div>
@@ -396,7 +397,10 @@ function AppContent() {
                                     border-blue-500 text-blue-600 bg-transparent hover:bg-blue-50 
                                     hover:text-blue-700 hover:border-blue-600 hover:shadow-lg 
                                     hover:shadow-blue-500/25"
-                                    onClick={() => window.open("/Nisar Ahmad Resume.pdf", "_blank")}>
+                    onClick={() =>
+                      window.open("/Nisar Ahmad Resume.pdf", "_blank")
+                    }
+                  >
                     <span className="relative z-10">
                       <svg
                         width="24"
@@ -417,11 +421,13 @@ function AppContent() {
                       Resume
                     </span>
                   </button>
-                  <button className="inline-flex items-center justify-center gap-2 rounded-xl 
+                  <button
+                    className="inline-flex items-center justify-center gap-2 rounded-xl 
                                     transition-all duration-300 cursor-pointer disabled:opacity-50 
                                     disabled:cursor-not-allowed font-semibold relative overflow-hidden 
                                     px-6 py-3 text-base text-gray-600 hover:text-blue-600 hover:bg-blue-50"
-                                    onClick={() => scrollToSection("contact")}>
+                    onClick={() => scrollToSection("contact")}
+                  >
                     <span className="relative z-10">Get in Touch</span>
                   </button>
                 </div>
@@ -600,7 +606,7 @@ function AppContent() {
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             className="lucide lucide-send w-4 h-4 relative top-1"
-                            aria-hidden="true"  
+                            aria-hidden="true"
                           >
                             <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
                             <path d="m21.854 2.147-10.94 10.939"></path>
