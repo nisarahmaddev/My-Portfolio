@@ -16,6 +16,12 @@ import { ThemeProvider, useTheme } from "./components/ThemeProvider";
 import { ThemeToggle } from "./components/ThemeToggle";
 import { ImageWithFallback } from "./components/figma/imageWithFallback";
 import ERROR_IMG_SRC from "./assets/main.png";
+import TodoImg from "./assets/Todo.png";
+import CrudImg from "./assets/crud.png";
+import MagicImg from "./assets/Magic.png";
+import GithubImg from "./assets/GithubFinder.png";
+import PortfolioImg from "./assets/about1.png";
+import EcommerceImg from "./assets/shopify.avif";
 
 interface Project {
   title: string;
@@ -67,8 +73,7 @@ function AppContent() {
       title: "Todo List App",
       description:
         "A sleek and intuitive todo list application with drag-and-drop functionality, real-time syncing, and customizable themes.",
-      image:
-        "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU4NTQ3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: TodoImg,
       tags: ["React", "TypeScript", "Recharts", "Tailwind CSS"],
       liveUrl: "https://todo-list-app-sepia-three.vercel.app/",
       codeUrl: "https://github.com/nisarahmaddev/Todo-List",
@@ -77,18 +82,16 @@ function AppContent() {
       title: "CRUD Application",
       description:
         "Cross-platform mobile banking application with biometric authentication and real-time transaction monitoring.",
-      image:
-        "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU4NTQ3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: CrudImg,
       tags: ["React Native", "TypeScript", "Firebase", "Expo"],
-      liveUrl: "https://example.com",
-      codeUrl: "https://github.com/nisarahmaddev/profile-manager",
+      liveUrl: "https://crud-app-three-orpin.vercel.app/",
+      codeUrl: "https://github.com/nisarahmaddev/CRUD-App",
     },
     {
       title: "Magic Memory",
       description:
         "Full-stack e-commerce solution with inventory management, payment processing, and admin dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1694599048261-a1de00f0117e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc1ODQ2OTIyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: MagicImg,
       tags: ["Next.js", "TypeScript", "Stripe", "Supabase"],
       liveUrl: "https://magic-memory-app.vercel.app/",
       codeUrl: "https://github.com/nisarahmaddev/Magic-Memory",
@@ -97,8 +100,7 @@ function AppContent() {
       title: "Github User Finder",
       description:
         "Collaborative project management application with real-time updates, team collaboration, and productivity analytics.",
-      image:
-        "https://images.unsplash.com/photo-1651055693398-0d66969cf759?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXNrJTIwbWFuYWdlbWVudCUyMGFwcHxlbnwxfHx8fDE3NTg0NjMwMTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: GithubImg,
       tags: ["React", "TypeScript", "Socket.io", "Node.js"],
       liveUrl: "https://github-user-finder-vercel.vercel.app",
       codeUrl: "https://github.com/nisarahmaddev/Github-User-Finder",
@@ -107,23 +109,28 @@ function AppContent() {
       title: "Portfolio Website",
       description:
         "Modern, responsive portfolio website showcasing creative work with smooth animations and interactive elements.",
-      image:
-        "https://images.unsplash.com/photo-1649000808933-1f4aac7cad9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc1ODU1NTQyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: PortfolioImg,
       tags: ["React", "Framer Motion", "Tailwind CSS", "Vercel"],
-      liveUrl: "https://example.com",
-      codeUrl: "https://github.com",
+      liveUrl: "https://my-portfolio-1mb1.vercel.app/",
+      codeUrl: "https://github.com/nisarahmaddev/My-Portfolio",
     },
     {
       title: "Ecommerce Store",
       description:
         "Full-stack e-commerce solution with inventory management, payment processing, and admin dashboard.",
-      image:
-        "https://images.unsplash.com/photo-1641567535859-c58187ac4954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHAlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU4NTU5NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: EcommerceImg,
       tags: ["Vue.js", "TypeScript", "OpenWeather API", "Mapbox"],
       liveUrl: "https://ecommerce-store-vercel-six.vercel.app/",
       codeUrl: "https://github.com/nisarahmaddev/Ecommerce-Store",
     },
   ];
+  // "https://images.unsplash.com/photo-1641567535859-c58187ac4954?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHAlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzU4NTU5NzEyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+  // "https://images.unsplash.com/photo-1651055693398-0d66969cf759?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0YXNrJTIwbWFuYWdlbWVudCUyMGFwcHxlbnwxfHx8fDE3NTg0NjMwMTF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+  // "https://images.unsplash.com/photo-1649000808933-1f4aac7cad9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3J0Zm9saW8lMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc1ODU1NTQyMHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+  // "https://images.unsplash.com/photo-1694599048261-a1de00f0117e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlY29tbWVyY2UlMjB3ZWJzaXRlJTIwZGVzaWdufGVufDF8fHx8MTc1ODQ2OTIyN3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+  // "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU4NTQ3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+  // "https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzU4NTQ3Mzk3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+
 
   const skills: string[] = [
     "React.Js",

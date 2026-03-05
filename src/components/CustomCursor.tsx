@@ -67,7 +67,6 @@ export function CustomCursor() {
         />
       ))}
       
-      {/* Main cursor */}
       <div
         className={`absolute w-6 h-6 border-2 border-purple-400 rounded-full transition-all duration-200 ${
           isHovering ? 'scale-150 border-cyan-400' : 'scale-100'
@@ -81,7 +80,6 @@ export function CustomCursor() {
         <div className="absolute inset-1 bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full opacity-30 animate-pulse" />
       </div>
       
-      {/* Inner dot */}
       <div
         className="absolute w-1 h-1 bg-white rounded-full"
         style={{
